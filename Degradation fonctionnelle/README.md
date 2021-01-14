@@ -1,4 +1,4 @@
-![artistic-erc](https://user-images.githubusercontent.com/50483699/86449612-b9113980-bd18-11ea-8ee0-ddd5cf7326a4.png)
+![artistic-erc](/home/marduq/Téléchargements/workflow.png)
 
 Analyse de la degradation de celulles
 ========================================================
