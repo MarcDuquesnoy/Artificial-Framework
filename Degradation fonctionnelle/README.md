@@ -6,7 +6,7 @@ Le but est d'appliquer l'analyse fonctionnelle pour la prédiction
 de performances de la cellules cyclée. Pour cela, on définit la dégradation
 comme critère de performance, étant la perte d'energie moyenne d'un cycle à un autres.
 
-$\bullet$ L'étude doit montrer qu'une analyse univariée sur les premiers cycles
+\item[$\bullet$] L'étude doit montrer qu'une analyse univariée sur les premiers cycles
 n'est pas suffisante pour pouvoir analyser la dégradation de la batterie.
   - il suffit de montrer que la correlation entre la dégradation sur les premiers cycles
 et celle totale n'est pas suffisamment forte.
