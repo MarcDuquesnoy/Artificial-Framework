@@ -97,8 +97,24 @@ grid = {"estimator__n_estimators": [10, 40, 50, 75, 90], 'n_jobs': [1, 2, 3], "e
         "estimator__bootstrap_features": [True], "estimator__oob_score": [True], "estimator__max_samples": [0.5, 1.0],
         "estimator__max_features": [0.5, 1.0]}
 
-training(Dataset, in_features, out_features, mod, grid)
+# training(Dataset, in_features, out_features, mod, grid)
 
 
 
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.gaussian_process.kernels import RBF, ConstantKernel as C
+
+kernel = C(1.0, (1e-3, 1e3)) * RBF(10, (1e-2, 1e2))
+gp = GaussianProcessRegressor(n_restarts_optimizer=9)
+
+
+XTrain, XTest, YTrain, YTest = train_test_split(Dataset[in_features], Dataset[out_features[0]], train_size=0.8)
+
+
+gp.fit(XTrain, YTrain)
+
+y_pred, sigma = gp.predict(XTest, return_std=True)
+
+plt.scatter(YTest, y_pred)
+plt.show()
 
