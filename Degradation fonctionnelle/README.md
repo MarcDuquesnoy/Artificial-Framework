@@ -2,11 +2,21 @@
 
 Analyse de la degradation de celulles
 ========================================================
-Le but est d'aplliquer l'analyse fonctionnelle pour la prédiction
+Le but est d'appliquer l'analyse fonctionnelle pour la prédiction
 de performances de la cellules cyclée. Pour cela, on définit la dégradation
 comme critère de performance, étant la perte d'energie moyenne d'un cycle à un autres.
 
-Dans cette étude, une regression logistique fonctionnelle et une regression pénalisée
+$\bullet$ L'étude doit montrer qu'une analyse univariée sur les premiers cycles
+n'est pas suffisante pour pouvoir analyser la dégradation de la batterie.
+  - il suffit de montrer que la correlation entre la dégradation sur les premiers cycles
+et celle totale n'est pas suffisamment forte.
+  - la visualisation des courbes SoH en fonction de la dégradation totale n'est pas un critère
+suffisant pour un expérimentateur pour conclure sur la qualité de la cellule.
+
+
+
+$\bullet$ Pour contrer cela, une analyse fonctionnelle sur des données issues
+des premiers cycles sera appliquée. C'est à dire, une regression logistique fonctionnelle et une regression pénalisée
 focntionnelle sont mis en places pour prédire respectivement :
 
 - au moment du cycle 30, la qualité finale de dégradation de la celulle sur l'ensemble 
@@ -14,8 +24,6 @@ focntionnelle sont mis en places pour prédire respectivement :
 - au moment du cycle 100, la valeur exacte de dégradation.
 
 
-L'étude montre qu'il est possible d'utiliser des courbes electrochimiques dans
-leur forme fonctionnelle, afin de prédire des performances définies au préable.
  
  Auteurs
  ========================================================
