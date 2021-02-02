@@ -89,6 +89,10 @@ def plot_prediction(ytest, pred):
 
 Dataset, out_features, in_features = feature(path='./DonneesInitiales.xlsx')
 
+Train, Test = train_test_split(Dataset, train_size=0.8)
+Train.to_csv('./train.dat', sep=" ")
+Test.to_csv('./test.dat', sep=" ")
+
 mod = BaggingRegressor()
 grid = {"estimator__n_estimators": [10, 40, 50, 75, 90], 'n_jobs': [1, 2, 3], "estimator__bootstrap": [True],
         "estimator__oob_score": [True], "estimator__max_features": [0.5, 1.0],
@@ -97,7 +101,7 @@ grid = {"estimator__n_estimators": [10, 40, 50, 75, 90], 'n_jobs': [1, 2, 3], "e
         "estimator__bootstrap_features": [True], "estimator__oob_score": [True], "estimator__max_samples": [0.5, 1.0],
         "estimator__max_features": [0.5, 1.0]}
 
-training(Dataset, in_features, out_features, mod, grid)
+# training(Dataset, in_features, out_features, mod, grid)
 
 
 
